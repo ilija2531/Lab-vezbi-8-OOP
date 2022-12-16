@@ -1,0 +1,34 @@
+package zadaca1;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Glavna {
+
+	public static void main(String[] args) {
+		
+		Map<String,String> recnik = new HashMap<String,String>();
+		recnik.put("door", "vrata");
+		recnik.put("table", "masa");
+		recnik.put("hi", "zdravo");
+		recnik.put("book", "kniga");
+		recnik.put("car", "kola");
+		
+		System.out.println(recnik.keySet());
+		System.out.println(recnik.values());
+		
+		for (Map.Entry<String, String> entry : recnik.entrySet()) {
+			System.out.println(entry.getKey() + "/" + entry.getValue());
+		}
+		
+		if(recnik.containsKey("hi")) {
+			System.out.println("Prevodot za hi e : " + recnik.get(2));
+		}
+		else
+		{
+			System.out.println("Ne postoi zbor hi");
+			
+		}
+	}
+
+}
